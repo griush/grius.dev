@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Hero from '../components/Hero.astro'; 
+import Header from '../components/Header.astro'; 
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="grius.dev | Software developer" description="Gerard Rius. Software Developer.">
+	<Header />
+	<main class="flex flex-col justify-center items-center">
+		<Hero />
+		<Projects />
+		<Skills />
+		<About />
+	</main>
+	<Footer />
+</Layout>

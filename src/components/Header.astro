@@ -1,0 +1,43 @@
+---
+const navItems = [
+    {
+        title: "Projects",
+        label: "projects",
+        url: "/#projects",
+    },
+    {
+        title: "Knowledge",
+        label: "skills",
+        url: "/#skills",
+    },
+    {
+        title: "About me",
+        label: "about-me",
+        url: "/#about-me",
+    },
+    {
+        title: "Contact",
+        label: "contact",
+        url: "/#contact",
+    },
+];
+---
+
+<header class="mt-5">
+    <nav class="flex flex-row justify-center items-center mx-auto">
+        {
+            navItems.map((link) => (
+                <>
+                    <a
+                        href={link.url}
+                        aria-label={link.label}
+                        class="group text-primary font-semibold mx-3 transition duration-300 hover:text-secondary"
+                    >
+                        {link.title}
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary" />
+                    </a>
+                </>
+            ))
+        }
+    </nav>
+</header>

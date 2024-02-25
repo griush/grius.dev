@@ -1,0 +1,60 @@
+---
+import GithubIcon from "./icons/Github.astro";
+import LinkedInIcon from "./icons/Linkedin.astro";
+---
+
+<section
+    class="mt-5 mb-16 flex flex-col justify-center items-start w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg"
+>
+    <h1
+        class="text-primary title-primary uppercase font-bold text-center text-8xl animate-blurred-fade-in animate-delay-150 animate-duration-200"
+    >
+        Gerard Rius
+    </h1>
+    <h1
+        class="text-secondary uppercase title-secondary font-medium text-center text-6xl animate-blurred-fade-in animate-delay-150 animate-duration-200"
+    >
+        Software developer
+    </h1>
+
+    <div
+        class="flex-row inline-flex border-gray-700 border rounded-full px-3 py-2 mt-7 mb-7 animate-fade-in animate-delay-150 animate-duration-200"
+    >
+        <a
+            href="https://github.com/griush"
+            target="_blank"
+            class="mx-2"
+            aria-label="github-icon"
+            ><GithubIcon
+                class="size-9 text-primary hover:text-gray-400 transition-all duration-300"
+            /></a
+        >
+        <a
+            href="https://www.linkedin.com/in/griush/"
+            target="_blank"
+            class="mx-2"
+            aria-label="linkedin-icon"
+            ><LinkedInIcon
+                class="size-9 text-primary hover:text-blue-400 transition-all duration-300"
+            /></a
+        >
+    </div>
+
+    <p
+        class="font-medium text-xl [&>strong]:text-secondary animate-blurred-fade-in animate-delay-150 animate-duration-200"
+    >
+        +7 years of coding. Self-taught <strong>software developer</strong>. Specialized in <strong
+            >game development</strong
+        >. From Barcelona, Spain 🇪🇸.
+    </p>
+</section>
+
+<style>
+    .title-primary {
+        text-shadow: #dddddda1 0 0 7px;
+    }
+
+    .title-secondary {
+        text-shadow: #e7bb41a1 0 0 7px;
+    }
+</style>
