@@ -1,31 +1,65 @@
 ---
 import "@fontsource-variable/montserrat";
-
-interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 
-		<meta name="image" content="/GR.png" />
-		<meta name="image:alt" content="grius.dev logo" />
+		<!-- HTML Meta Tags -->
+		<title>Gerard Rius | Software developer | grius.dev</title>
+		<meta
+			name="description"
+			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+		/>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://grius.dev" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content="Gerard Rius | Software developer | grius.dev"
+		/>
+		<meta
+			property="og:description"
+			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+		/>
+		<meta
+			property="og:image"
+			content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
+		/>
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="grius.dev" />
+		<meta property="twitter:url" content="https://grius.dev" />
+		<meta
+			name="twitter:title"
+			content="Gerard Rius | Software developer | grius.dev"
+		/>
+		<meta
+			name="twitter:description"
+			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
+		/>
+
+		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+		<meta name="og:image:alt" content="grius.dev logo" />
 
 		<meta name="canonical" content="https://grius.dev" />
 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 	</head>
-	<body class="absolute top-0 z-[-2] h-screen w-svw bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+	<body
+		class="absolute top-0 z-[-2] h-screen w-svw bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+	>
 		<slot />
 	</body>
 </html>
@@ -44,8 +78,8 @@ const { title, description } = Astro.props;
 
 	::-webkit-scrollbar-track {
 		background: #222;
-        border-radius: 9999px;
-        border: solid 1px #333;
+		border-radius: 9999px;
+		border: solid 1px #333;
 	}
 
 	/* Handle */
