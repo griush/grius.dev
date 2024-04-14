@@ -4,92 +4,94 @@ import "@fontsource-variable/montserrat";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-		<!-- HTML Meta Tags -->
-		<title>Gerard Rius | Software developer | grius.dev</title>
-		<meta
-			name="description"
-			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
-		/>
+    <!-- HTML Meta Tags -->
+    <title>Gerard Rius | Software developer | grius.dev</title>
+    <meta
+      name="description"
+      content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+    />
 
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content="https://grius.dev" />
-		<meta property="og:type" content="website" />
-		<meta
-			property="og:title"
-			content="Gerard Rius | Software developer | grius.dev"
-		/>
-		<meta
-			property="og:description"
-			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
-		/>
-		<meta
-			property="og:image"
-			content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
-		/>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://grius.dev" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Gerard Rius | Software developer | grius.dev"
+    />
+    <meta
+      property="og:description"
+      content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
+    />
 
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="grius.dev" />
-		<meta property="twitter:url" content="https://grius.dev" />
-		<meta
-			name="twitter:title"
-			content="Gerard Rius | Software developer | grius.dev"
-		/>
-		<meta
-			name="twitter:description"
-			content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
-		/>
-		<meta
-			name="twitter:image"
-			content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
-		/>
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="grius.dev" />
+    <meta property="twitter:url" content="https://grius.dev" />
+    <meta
+      name="twitter:title"
+      content="Gerard Rius | Software developer | grius.dev"
+    />
+    <meta
+      name="twitter:description"
+      content="Gerard Rius. Self-taught Software Developer for +7 years. Look at some of my projects and experiences here."
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/documents/950434b9-853f-4747-a197-a78707bb040f.png?token=Lbis7d0y-owQ4LwzGrTLjTtgpFxCCNl4qkCT8p7IQ1o&height=442&width=812&expires=33246001265"
+    />
 
-		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
-		<meta name="og:image:alt" content="grius.dev logo" />
+    <meta name="og:image:alt" content="grius.dev logo" />
 
-		<meta name="canonical" content="https://grius.dev" />
+    <meta name="canonical" content="https://grius.dev" />
 
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-	</head>
-	<body
-		class="absolute top-0 z-[-2] h-screen w-svw bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-10%,rgba(120,119,198,0.3),#0A0A0D)]"
-	>
-		<slot />
-	</body>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-neutral-950 bg-[linear-gradient(to_right,#181818_1px,transparent_1px),linear-gradient(to_bottom,#181818_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    >
+    </div>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	html {
-		font-family: "Montserrat Variable", system-ui, sans-serif;
-		background: #0A0A0D;
-		color: #ddd;
-		overflow-x: hidden;
-		scroll-behavior: smooth;
-	}
+  html {
+    font-family: "Montserrat Variable", system-ui, sans-serif;
+    background: #0a0a0d;
+    color: #ddd;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
 
-	::-webkit-scrollbar {
-		width: 10px;
-	}
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-	::-webkit-scrollbar-track {
-		background: #222;
-		border-radius: 9999px;
-		border: solid 1px #333;
-	}
+  ::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 9999px;
+    border: solid 1px #333;
+  }
 
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		background: #444;
-		border-radius: 9999px;
-	}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 9999px;
+  }
 
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: #666;
-	}
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
 </style>
