@@ -18,7 +18,7 @@ import LinkedInIcon from "./icons/Linkedin.astro";
     </h1>
 
     <div
-        class="flex-row inline-flex border-neutral-600 border rounded-full px-3 py-2 mt-7 mb-7 bg-neutral-900 hover:border-neutral-400 tranition-all duration-200"
+        class="flex-row inline-flex border-neutral-600 glow border rounded-full px-3 py-2 mt-7 mb-7 bg-neutral-900 hover:border-neutral-400 tranition-all duration-100"
     >
         <a
             href="https://github.com/griush"
@@ -26,7 +26,7 @@ import LinkedInIcon from "./icons/Linkedin.astro";
             class="mx-2"
             aria-label="github-icon"
             ><GithubIcon
-                class="size-9 text-primary hover:text-gray-400 transition-all duration-200 hover:scale-110"
+                class="size-9 text-primary hover:text-gray-400 transition-all duration-100 hover:scale-110"
             /></a
         >
         <a
@@ -35,7 +35,7 @@ import LinkedInIcon from "./icons/Linkedin.astro";
             class="mx-2"
             aria-label="linkedin-icon"
             ><LinkedInIcon
-                class="size-9 text-primary hover:text-blue-400 transition-all duration-200 hover:scale-110"
+                class="size-9 text-primary hover:text-blue-400 transition-all duration-100 hover:scale-110"
             /></a
         >
     </div>
@@ -56,5 +56,9 @@ import LinkedInIcon from "./icons/Linkedin.astro";
 
     .title-secondary {
         text-shadow: #e7bb41a1 0 0 7px;
+    }
+
+    .glow:hover {
+        filter: drop-shadow(0px 0px 4px whitesmoke);
     }
 </style>
