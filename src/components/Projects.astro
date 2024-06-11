@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import emulator_banner from "./images/6502_emulator.webp";
 import pong_screenshot from "./images/pong_sreenshot.webp";
-import ga_screenshot from "./images/ga_screenshot.webp";
+import galileo_hack_banner from "./images/GalileoHack.webp";
 
 import Button from "./Button.astro";
 ---
@@ -14,6 +14,23 @@ import Button from "./Button.astro";
     <h2 class="font-semibold text-4xl">Projects</h2>
     <p class="pt-2">Currently working on some cool things...</p>
     <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        <div
+            class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
+        >
+            <Image
+                src={galileo_hack_banner}
+                alt="6502 Emulator banner"
+                class="rounded-lg"
+                height={150}
+                loading="eager"
+            />
+            <h3 class="font-semibold text-2xl mt-2 mb-1">GalileoHack 🛰🏆</h3>
+            <p class="mb-3 text-neutral-400">Java</p>
+            <Button
+                text="Source Code"
+                link="https://github.com/griush/GalileoHack"
+            />
+        </div>
         <div
             class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
         >
@@ -46,24 +63,6 @@ import Button from "./Button.astro";
             <Button text="Play" link="https://griush.github.io/Pong-Clone" />
             <Button
                 link="https://github.com/griush/Pong-Clone"
-                text="Source Code"
-            />
-        </div>
-        <div
-            class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
-        >
-            <Image
-                src={ga_screenshot}
-                alt="Geometry Apex Screenshot"
-                class="rounded-lg"
-                height={150}
-                loading="eager"
-            />
-            <h3 class="font-semibold text-2xl mt-2 mb-1">Geometry Apex</h3>
-            <p class="mb-3 text-neutral-400">HTML, CSS, JavaScript</p>
-            <Button link="https://griush.github.io/GeometryApex/" text="Play" />
-            <Button
-                link="https://github.com/griush/GeometryApex"
                 text="Source Code"
             />
         </div>
