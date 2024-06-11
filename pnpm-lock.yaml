@@ -17,15 +17,6 @@ importers:
       '@fontsource-variable/montserrat':
         specifier: ^5.0.18
         version: 5.0.18
-      '@fontsource/fira-sans':
-        specifier: ^5.0.20
-        version: 5.0.20
-      '@fontsource/lato':
-        specifier: ^5.0.21
-        version: 5.0.21
-      '@fontsource/roboto':
-        specifier: ^5.0.13
-        version: 5.0.13
       '@midudev/tailwind-animations':
         specifier: ^0.0.7
         version: 0.0.7(tailwindcss@3.4.3)
@@ -238,8 +229,8 @@ packages:
   '@emmetio/scanner@1.0.4':
     resolution: {integrity: sha512-IqRuJtQff7YHHBk4G8YZ45uB9BaAGcwQeVzgj/zj8/UdOhtQpEIupUhSk8dys6spFIWVZVeK20CzGEnqR5SbqA==}
 
-  '@emnapi/runtime@1.1.1':
-    resolution: {integrity: sha512-3bfqkzuR1KLx57nZfjr2NLnFOobvyS0aTszaEGCGqmYMVDRaGvgIZbjGSV/MHSSmLgQ/b9JFHQ5xm5WRZYd+XQ==}
+  '@emnapi/runtime@1.2.0':
+    resolution: {integrity: sha512-bV21/9LQmcQeCPEg3BDFtvwL6cwiTMksYNWQQ4KOxCZikEGalWtenoZ0wCiukJINlGCIi2KXx01g4FoH/LxpzQ==}
 
   '@esbuild/aix-ppc64@0.19.12':
     resolution: {integrity: sha512-bmoCYyWdEL3wDQIVbcyzRyeKLgk2WtWLTWz1ZIAZF/EGbNOwSA6ew3PftJ1PqMiOOGu0OyFMzG53L0zqIpPeNA==}
@@ -381,15 +372,6 @@ packages:
 
   '@fontsource-variable/montserrat@5.0.18':
     resolution: {integrity: sha512-X7ZGaabqbPTOdouKkwF8KlAuHI9ypbKVYJN93T8GGjiMhs0+XqcXcYMNC282xuPLPCkl4fYSIug1wKKpXn/e9Q==}
-
-  '@fontsource/fira-sans@5.0.20':
-    resolution: {integrity: sha512-inmUjoKPrgnO4uUaZTAgP0b6YdhDfA52axHXvdTwgLvwd2kn3ZgK52UZoxD0VnrvTOjLA/iE4oC0tNtz4nyb5g==}
-
-  '@fontsource/lato@5.0.21':
-    resolution: {integrity: sha512-UubLwvJO2bKuhWv6+ocx2Bou/pPIT6q7VpYaHIW7ZDaLPQY3uYAhveJg6P7Lvz5HYHyLba8JUc3yP7wvcqA8zQ==}
-
-  '@fontsource/roboto@5.0.13':
-    resolution: {integrity: sha512-j61DHjsdUCKMXSdNLTOxcG701FWnF0jcqNNQi2iPCDxU8seN/sMxeh62dC++UiagCWq9ghTypX+Pcy7kX+QOeQ==}
 
   '@img/sharp-darwin-arm64@0.33.3':
     resolution: {integrity: sha512-FaNiGX1MrOuJ3hxuNzWgsT/mg5OHG/Izh59WW2mk1UwYHUwtfbhk5QNKYZgxf0pLOhx9ctGiGa2OykD71vOnSw==}
@@ -2024,8 +2006,8 @@ packages:
       typescript:
         optional: true
 
-  tslib@2.6.2:
-    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+  tslib@2.6.3:
+    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
@@ -2612,9 +2594,9 @@ snapshots:
 
   '@emmetio/scanner@1.0.4': {}
 
-  '@emnapi/runtime@1.1.1':
+  '@emnapi/runtime@1.2.0':
     dependencies:
-      tslib: 2.6.2
+      tslib: 2.6.3
     optional: true
 
   '@esbuild/aix-ppc64@0.19.12':
@@ -2688,12 +2670,6 @@ snapshots:
 
   '@fontsource-variable/montserrat@5.0.18': {}
 
-  '@fontsource/fira-sans@5.0.20': {}
-
-  '@fontsource/lato@5.0.21': {}
-
-  '@fontsource/roboto@5.0.13': {}
-
   '@img/sharp-darwin-arm64@0.33.3':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.2
@@ -2760,7 +2736,7 @@ snapshots:
 
   '@img/sharp-wasm32@0.33.3':
     dependencies:
-      '@emnapi/runtime': 1.1.1
+      '@emnapi/runtime': 1.2.0
     optional: true
 
   '@img/sharp-win32-ia32@0.33.3':
@@ -4692,7 +4668,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  tslib@2.6.2:
+  tslib@2.6.3:
     optional: true
 
   tunnel-agent@0.6.0:
