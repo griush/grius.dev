@@ -8,17 +8,63 @@ import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import About from "../components/About.astro";
 import Footer from "../components/Footer.astro";
+
+import Arrow from "../components/icons/arrow.astro";
 ---
 
-<Layout
->
-	<Header />
-	<main class="flex flex-col justify-center items-center">
-		<Hero />
-		<Experience />
-		<Projects />
-		<Skills />
-		<About />
-	</main>
-	<Footer />
+<Layout>
+  <Header />
+  <main class="flex flex-col justify-center items-center">
+    <Hero />
+    <Experience />
+    <Projects />
+    <Skills />
+    <About />
+  </main>
+  <Footer />
+
+  <button
+    type="button"
+    id="top-button"
+    class="fixed px-3 py-2 transition-all bg-neutral-900 rounded-xl duration-150 bottom-10 right-10 scale-0 border border-neutral-600 text-neutral-400 hover:border-neutral-300 hover:text-neutral-100"
+  >
+    <Arrow />
+  </button>
 </Layout>
+
+<script>
+  // Get the button:
+  let to_top = document.getElementById("top-button");
+
+  if (to_top == null) console.error("to_top is null");
+  else {
+    to_top.onclick = topFunction;
+  }
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (to_top == null) return;
+
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      to_top.style.display = "block";
+      to_top.className =
+        "fixed px-3 py-2 transition-all bg-neutral-900 rounded-xl duration-150 bottom-10 right-10 scale-100 border border-neutral-600 text-neutral-400 hover:border-neutral-300 hover:text-neutral-100";
+    } else {
+      to_top.className =
+        "fixed px-3 py-2 transition-all bg-neutral-900 rounded-xl duration-150 bottom-10 right-10 scale-0 border border-neutral-600 text-neutral-400 hover:border-neutral-300 hover:text-neutral-100";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</script>
