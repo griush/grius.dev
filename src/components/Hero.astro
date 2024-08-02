@@ -1,62 +1,95 @@
 ---
 import GithubIcon from "./icons/Github.astro";
 import LinkedInIcon from "./icons/Linkedin.astro";
+
+const navItems = [
+  {
+    title: "Experience",
+    label: "experience",
+    url: "/#experience",
+  },
+  {
+    title: "Projects",
+    label: "projects",
+    url: "/#projects",
+  },
+  {
+    title: "Tech Stack",
+    label: "skills",
+    url: "/#skills",
+  },
+  {
+    title: "About me",
+    label: "about-me",
+    url: "/#about-me",
+  },
+  {
+    title: "Contact",
+    label: "contact",
+    url: "/#contact",
+  },
+];
 ---
 
 <section
-    class="z-0 mt-5 mb-16 flex flex-col justify-center items-start w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs"
+  class="flex flex-col h-screen m-auto items-start justify-center w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs animate-fade-in"
 >
-    <h1
-        class="text-primary title-primary uppercase font-bold text-center sm:text-8xl text-7xl"
-    >
-        Gerard Rius
-    </h1>
-    <h2
-        class="text-secondary uppercase title-secondary font-medium text-center sm:text-6xl text-4xl"
-    >
-        Software developer
-    </h2>
+  <h1 class="text-primary uppercase font-bold text-center sm:text-8xl text-7xl">
+    Gerard Rius
+  </h1>
+  <h2
+    class="text-secondary uppercase font-semibold text-center sm:text-6xl text-4xl"
+  >
+    Software Developer
+  </h2>
 
-    <div
-        class="flex-row inline-flex border-neutral-600 border rounded-full px-3 py-2 mt-7 mb-7 bg-neutral-900 hover:border-neutral-300 tranition-all duration-100"
+  <div class="flex my-4">
+    <a
+      href="http://github.com/griush/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mr-1"
     >
-        <a
-            href="https://github.com/griush"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mx-2"
-            aria-label="github-icon"
-            ><GithubIcon
-                class="size-9 text-primary hover:text-gray-400 transition-all duration-100 hover:scale-110"
-            /></a
-        >
-        <a
-            href="https://www.linkedin.com/in/griush/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mx-2"
-            aria-label="linkedin-icon"
-            ><LinkedInIcon
-                class="size-9 text-primary hover:text-blue-400 transition-all duration-100 hover:scale-110"
-            /></a
-        >
-    </div>
+      <GithubIcon
+        class="size-9 text-primary hover:text-gray-400 transition-all duration-100 hover:scale-110"
+      />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/griush/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ml-1"
+    >
+      <LinkedInIcon
+        class="size-9 text-primary hover:text-blue-400 transition-all duration-100 hover:scale-110"
+      />
+    </a>
+  </div>
 
-    <p
-        class="font-medium sm:text-xl text-lg [&>strong]:text-secondary"
-    >
-        Self-taught <strong>software developer</strong>.
-        Currently studying <strong>computer science</strong> at UPC. From Barcelona, Spain
-        🇪🇸.
-    </p>
+  <p class="font-medium sm:text-xl text-lg [&>strong]:text-secondary">
+    Self-taught <strong>software developer</strong>. Currently studying <strong
+      >computer science</strong
+    > at UPC. From Barcelona, Spain 🇪🇸.
+  </p>
+
+  <br>
+  <p class="font-medium sm:text-xl text-lg [&>strong]:text-secondary">Take a <strong>look</strong> at...</p>
+  <nav
+    class="flex flex-row justify-center items-center rounded-full py-2"
+  >
+    {
+      navItems.map((link) => (
+        <>
+          <a
+            href={link.url}
+            aria-label={link.label}
+            class="group text-primary font-semibold mr-7 transition duration-150 hover:text-secondary sm:text-base text-xs"
+          >
+            {link.title}
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-150 h-0.5 bg-secondary" />
+          </a>
+        </>
+      ))
+    }
+  </nav>
 </section>
-
-<style>
-    .title-primary {
-        text-shadow: #dddddda1 0 0 7px;
-    }
-
-    .title-secondary {
-        text-shadow: #e7bb41a1 0 0 7px;
-    }
-</style>

@@ -60,17 +60,13 @@ import "@fontsource-variable/montserrat";
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
-    <div
-      class="fixed inset-0 -z-10 h-full w-full bg-neutral-950 bg-[linear-gradient(to_right,#181818_1px,transparent_1px),linear-gradient(to_bottom,#181818_1px,transparent_1px)] bg-[size:6rem_4rem]"
-    >
-    </div>
     <slot />
   </body>
 </html>
 <style is:global>
   html {
     font-family: "Montserrat Variable", system-ui, sans-serif;
-    background: #0a0a0d;
+    background: #26292c;
     color: #ddd;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -81,19 +77,19 @@ import "@fontsource-variable/montserrat";
   }
 
   ::-webkit-scrollbar-track {
-    background: #222;
+    background: #26292c;
     border-radius: 9999px;
-    border: solid 1px #333;
+    border: solid 1px #26292c;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #444;
+    background: #586270;
     border-radius: 9999px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #666;
+    background: #707C8F;
   }
 </style>

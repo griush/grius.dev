@@ -1,70 +1,43 @@
 ---
-import { Image } from "astro:assets";
+import Project from "./Project.astro";
+
+import zm from "./images/zm.webp";
+import galileo_hack_banner from "./images/GalileoHack.webp";
 import emulator_banner from "./images/6502_emulator.webp";
 import pong_screenshot from "./images/pong_sreenshot.webp";
-import galileo_hack_banner from "./images/GalileoHack.webp";
-
-import Button from "./Button.astro";
 ---
 
 <section
-    id="projects"
-    class="my-5 w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs"
+  id="projects"
+  class="flex flex-col m-auto items-start justify-center w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs"
 >
-    <h2 class="font-semibold text-4xl">Projects</h2>
-    <p class="pt-2">Currently working on some cool things...</p>
-    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-        <div
-            class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
-        >
-            <Image
-                src={galileo_hack_banner}
-                alt="6502 Emulator banner"
-                class="rounded-lg"
-                height={150}
-                loading="eager"
-            />
-            <h3 class="font-semibold text-2xl mt-2 mb-1">GalileoHack 🛰🏆</h3>
-            <p class="mb-3 text-neutral-400">Java</p>
-            <Button
-                text="Source Code"
-                link="https://github.com/griush/GalileoHack"
-            />
-        </div>
-        <div
-            class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
-        >
-            <Image
-                src={emulator_banner}
-                alt="6502 Emulator banner"
-                class="rounded-lg"
-                height={150}
-                loading="eager"
-            />
-            <h3 class="font-semibold text-2xl mt-2 mb-1">6502 Emulator</h3>
-            <p class="mb-3 text-neutral-400">Rust</p>
-            <Button
-                text="Source Code"
-                link="https://github.com/griush/6502_emulator"
-            />
-        </div>
-        <div
-            class="hover:scale-110 border border-solid rounded-xl border-neutral-600 hover:border-neutral-300 transition-all duration-100 p-4 mt-5 mr-5 bg-neutral-900"
-        >
-            <Image
-                src={pong_screenshot}
-                alt="Pong Clone Screenshot"
-                class="rounded-lg"
-                height={150}
-                loading="eager"
-            />
-            <h3 class="font-semibold text-2xl mt-2 mb-1">Pong Clone</h3>
-            <p class="mb-3 text-neutral-400">HTML, CSS, JavaScript</p>
-            <Button text="Play" link="https://griush.github.io/Pong-Clone" />
-            <Button
-                link="https://github.com/griush/Pong-Clone"
-                text="Source Code"
-            />
-        </div>
-    </div>
+  <h2 class="font-semibold text-4xl">Projects</h2>
+  <Project
+    image={zm}
+    title="zm"
+    lang="Zig"
+    description="A fast and cross-platform math library easy to use for games, science, simulations and more."
+    repo="zm"
+  />
+  <Project
+    image={galileo_hack_banner}
+    title="GalileoHack"
+    lang="Java"
+    description="An Android application to visualize raw GNSS data. HackUPC 2024 ESA Challenge winner. 🏆"
+    repo="GalileoHack"
+  />
+  <Project
+    image={emulator_banner}
+    title="6502 Emulator"
+    lang="Rust"
+    description="A plain and simple 6502 chip emulator."
+    repo="6502_emulator"
+  />
+  <Project
+    image={pong_screenshot}
+    title="Pong Clone"
+    lang="HTML/CSS/JS"
+    description="A clone of the classic game of Pong. Made from scratch using canvas and no frameworks or engine."
+    repo="Pong-Clone"
+  />
 </section>

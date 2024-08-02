@@ -4,17 +4,30 @@ import CodelearnLogo from "./images/codelearn-logo.webp";
 ---
 
 <section
-    id="experience"
-    class="my-5 w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs"
+  id="experience"
+  class="flex flex-col m-auto items-start justify-center w-full lg:max-w-4xl md:max-w-2xl sm:max-w-lg max-w-xs"
 >
-    <h2 class="font-semibold text-4xl">Experience</h2>
-    <article class="flex flex-row my-5">
-        <Image src={CodelearnLogo} alt="Codelearn Logo" height={80} class="my-auto" loading="eager" />
-        <div class="mx-3">
-            <h3 class="text-2xl font-bold [&>strong]:text-secondary [&>strong]:font-bold">
-                Worked at <strong>Codelearn</strong> as a teacher
-            </h3>
-            <p class="[&>strong]:text-secondary">I taught kids the essentials of game development with <strong>Unreal Engine 5</strong>.</p>
-        </div>
-    </article>
+  <h2 class="font-semibold text-4xl">Experience</h2>
+  <article class="flex flex-row my-5 align-middle">
+    <Image
+      src={CodelearnLogo}
+      alt="Codelearn Logo"
+      height={80}
+      class="my-auto"
+      loading="eager"
+    />
+    <div class="mx-3">
+      <h3
+        class="text-2xl font-bold [&>strong]:text-secondary [&>strong]:font-bold"
+      >
+        Worked at <strong>Codelearn</strong> as a teacher
+      </h3>
+      <p class="text-neutral-400 my-1">July 2023</p>
+      <p class="[&>strong]:text-secondary">
+        I taught kids the essentials of game development with <strong
+          >Unreal Engine 5</strong
+        >.
+      </p>
+    </div>
+  </article>
 </section>
