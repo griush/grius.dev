@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import GithubIcon from "./icons/Github.astro";
+
+const { image, title, lang, description, repo } = Astro.props;
+---
+
+<article class="flex flex-row my-5 align-middle">
+  <Image
+    src={image}
+    alt={title}
+    width={240}
+    height={160}
+    class="my-auto rounded-lg"
+    loading="lazy"
+  />
+  <div class="mx-3">
+    <h3
+      class="text-2xl font-bold"
+    >
+      {title}
+      <Image 
+        alt={"GitHub Repo stars"}
+        src={`https://img.shields.io/github/stars/griush/${repo}?style=social&logo=github`}
+        inferSize={true}
+      />
+    </h3>
+    <p class="text-neutral-400 my-1">{lang}</p>
+    <p class="[&>strong]:text-secondary my-1">{description}</p>
+
+    <div class="flex my-2">
+      <a href={`https://github.com/griush/${repo}/`} role="link" target="_blank" rel="noopener noreferrer" class="button inline-flex p-2 gap-1 mr-1 border border-gray-600 rounded-xl transition-colors duration-150">
+        <GithubIcon
+          class="size-6 text-primary"
+        />
+        Code
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .button {
+    background-color: #34393e;
+  }
+  .button:hover {
+    background-color: #4e555d;
+  }
+</style>
